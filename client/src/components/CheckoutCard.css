@@ -1,0 +1,170 @@
+.checkout-panel{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(6px);
+
+    animation:fade .35s ease;
+    z-index:1000;
+}
+
+.checkout-card{
+
+    width:420px;
+
+    max-width:92%;
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    color:white;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.35);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    transform:perspective(1000px) rotateX(3deg);
+
+    animation:slide .45s ease;
+}
+
+.checkout-card h2{
+
+    margin-bottom:25px;
+}
+
+.checkout-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin:15px 0;
+}
+
+.checkout-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:25px;
+
+    font-size:20px;
+}
+
+.email-section{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.email-section label{
+    font-weight: 600;
+}
+
+.email-section input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.email-section input:focus{
+    outline: none;
+    border-color: #333;
+}
+
+.pay-btn{
+
+    margin-top:30px;
+
+    width:100%;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    background:#00C853;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.pay-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(0,200,83,.35);
+}
+
+.close-btn{
+
+    float:right;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+}
+
+@keyframes slide{
+
+    from{
+
+        transform:
+        translateY(80px)
+        scale(.85);
+
+        opacity:0;
+    }
+
+    to{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+        opacity:1;
+    }
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+    }
+
+    to{
+
+        opacity:1;
+    }
+}
+
